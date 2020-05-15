@@ -10,4 +10,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap'); //fitness
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500&display=swap'); //онлайн
 @import '/assets/scss/main.scss';
+@import '/assets/scss/variables.scss';
 </style>

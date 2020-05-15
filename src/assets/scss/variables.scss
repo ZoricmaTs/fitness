@@ -1,9 +1,19 @@
-@import '../../node_modules/bootstrap/scss/bootstrap';
-@import '../../node_modules/bootstrap/scss/functions';
-@import '../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../../node_modules/bootstrap/scss/functions.scss';
+@import '../../../node_modules/bootstrap/scss/variables';
 
 $enable-responsive-font-sizes: true;
 $font-size-base: 0.875rem; //14 body
 $h1-font-size: 2.5rem; // 40
 $h2-font-size: 1.5rem; // 24
 $h3-font-size: 1.125rem; //18
+
+h1 {
+  @include font-size(2.5rem);
+}
+h2 {
+  @include font-size(1.5rem);
+}
+h3 {
+  @include font-size(1.125rem);
+}

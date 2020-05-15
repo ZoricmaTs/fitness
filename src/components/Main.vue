@@ -90,9 +90,7 @@ export default {
 <style lang="scss">
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
-@import '../../node_modules/bootstrap/scss/functions';
-@import '../../node_modules/bootstrap/scss/variables';
-//@import '../assets/scss/main.scss';
+@import '../assets/scss/variables.scss';
 .logo {
   &__title {
     font-family: 'Sacramento';
@@ -104,6 +102,7 @@ export default {
     border: 1px solid white;
   }
 }
+
 @media (max-width: 768px) {
   .logo__title {
   }
