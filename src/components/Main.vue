@@ -4,7 +4,7 @@
       <div class="row">
         <div class="ml-5 col-lg-8">
           <h1 class="logo__title mt-3 mb-3">Fintess</h1>
-          <p class>Нужно придумать какую-нибудь фразу в строку</p>
+          <h3>Нужно придумать какую-нибудь фразу в строку</h3>
           <div class>
             <button
               class="btn mr-4 header__btn mt-3 pt-2 pb-2"
