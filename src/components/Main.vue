@@ -1,26 +1,23 @@
 <template>
   <section id="firts_section">
-    <header class="container w-1280" id="header">
+    <header class="container-fluid" id="header">
       <div class="row">
-        <div class="wrapper_header ml-5 col-lg-8">
-          <h1 class="header_h1 mt-3 mb-3">
-            ФИТНЕС ОНЛАЙН
-            <br />С КОЛЛЕКТИВНОЙ ПОДДЕРЖКОЙ
-          </h1>
-          <p class="header_p">
-            Художественный ритуал многопланово образует эпитет. Интерпретация,
-            по определению, изящно дает фактографический горизонт ожидания.
-            многопланово аккумулирует онтогенез.
-          </p>
+        <div class="ml-5 col-lg-8">
+          <h1 class="logo__title mt-3 mb-3">Fintess</h1>
+          <p class>Нужно придумать какую-нибудь фразу в строку</p>
           <div class>
             <button
               class="btn mr-4 header__btn mt-3 pt-2 pb-2"
               @click="showModalAuth = !showModalAuth"
-            >ВОЙТИ</button>
+            >
+              ВОЙТИ
+            </button>
             <button
               class="btn ml-5 header__btn mt-3 pt-2 pb-2"
               @click="showModal = !showModal"
-            >ЗАРЕГИСТРИРОВАТЬСЯ</button>
+            >
+              ЗАРЕГИСТРИРОВАТЬСЯ
+            </button>
           </div>
         </div>
       </div>
@@ -90,4 +87,25 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+//@import '../assets/scss/main.scss';
+.logo {
+  &__title {
+    font-family: 'Sacramento';
+    font-style: normal;
+    font-weight: normal;
+
+    @include font-size(160px);
+    color: #db4b1a;
+    border: 1px solid white;
+  }
+}
+@media (max-width: 768px) {
+  .logo__title {
+  }
+}
+</style>

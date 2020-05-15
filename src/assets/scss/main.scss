@@ -1,101 +1,20 @@
-@font-face {
-  font-family: 'icomoon';
-  src: url('./assets/fonts/icmoon/icomoon.eot?nkotqe');
-  src: url('./assets/fonts/icmoon/icomoon.eot?nkotqe#iefix')
-      format('embedded-opentype'),
-    url('./assets/fonts/icmoon/icomoon.ttf?nkotqe') format('truetype'),
-    url('./assets/fonts/icmoon/icomoon.woff?nkotqe') format('woff'),
-    url('./assets/fonts/icmoon/icomoon.svg?nkotqe#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-[class^='icon-'],
-[class*=' icon-'] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-iconmonstr-whatsapp-1:before {
-  content: '\e900';
-}
-.icon-iconmonstr-vk-1:before {
-  content: '\e901';
-}
-.icon-iconmonstr-instagram-11:before {
-  content: '\e902';
-}
-.icon-iconmonstr-twitter-1:before {
-  content: '\e903';
-}
-
-.icon {
-  color: white;
-  font-size: 18px;
-  text-decoration: none !important;
-}
-.icon:hover {
-  color: #bbf417 !important;
-}
+$enable-responsive-font-sizes: true;
 
 body {
   font-family: 'Raleway';
+  font-style: normal;
   font-weight: normal;
+  font-size: 14px;
 }
 #app {
-}
-
-//////// header ///////
-
-.w-1280 {
-  max-width: 1280px;
-  width: 100%;
 }
 
 #header {
   background-image: url('assets/img/image8.png');
   background-size: 100%;
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  background-color: #333333;
-}
-
-.wrapper_header {
-  width: 100%;
-  max-width: 675px;
-  padding-bottom: 195px;
-
-  .logo {
-    width: 65px;
-    height: 43px;
-  }
-  .header_h1 {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 44px;
-    letter-spacing: 0.05em;
-    color: #ffffff;
-  }
-  .header_p {
-    color: white;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 150%;
-    letter-spacing: 0.05em;
-  }
 }
 
 .header__btn {
@@ -120,5 +39,3 @@ body {
     border: #bbf417 solid 3px;
   }
 }
-
-//////  main//////////
