@@ -4,8 +4,6 @@ body {
   font-weight: normal;
   font-size: 14px;
 }
-#app {
-}
 
 #header {
   background-image: url('assets/img/image8.png');
@@ -13,27 +11,4 @@ body {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-}
-
-.header__btn {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0.1em;
-  color: white !important;
-  width: 100%;
-  max-width: 282px;
-  border: #cbf74f solid 3px;
-  box-sizing: border-box;
-  border-radius: 30px;
-
-  &:focus {
-    background: #cbff35;
-    border: #cbff35 solid 3px;
-  }
-  &:hover {
-    background: #bbf417;
-    border: #bbf417 solid 3px;
-  }
 }

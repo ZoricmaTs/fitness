@@ -3,17 +3,35 @@
 @import '../../../node_modules/bootstrap/scss/variables';
 
 $enable-responsive-font-sizes: true;
-$font-size-base: 0.875rem; //14 body
-$h1-font-size: 2.5rem; // 40
-$h2-font-size: 1.5rem; // 24
-$h3-font-size: 1.125rem; //18
 
-h1 {
-  @include font-size(2.5rem);
+$font-size-40: 2.5rem; // 40
+$font-size-24: 1.5rem; // 24
+$font-size-body20: 1.25rem; //20
+$font-size-18: 1.125rem; //18
+$font-size-body14: 0.875rem; //14 body
+$font-size-body12: 0.75rem;
+$color-dark-gray: #312829;
+$color-black: #000000;
+$color-orange: #db4b1a;
+$color-red: #ed5c4d;
+$color-white: #eff2f1;
+
+.text__heading_size_h1 {
+  @include font-size($font-size-40);
 }
-h2 {
-  @include font-size(1.5rem);
+.text__heading_size_h2 {
+  @include font-size($font-size-24);
 }
-h3 {
-  @include font-size(1.125rem);
+.text__heading_size_h3 {
+  @include font-size($font-size-18);
+}
+
+.text__heading_size_l {
+  @include font-size($font-size-body20);
+}
+.text__heading_size_m {
+  @include font-size($font-size-body14);
+}
+.text__heading_size_m {
+  @include font-size($font-size-body12);
 }

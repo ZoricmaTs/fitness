@@ -3,20 +3,22 @@
     <header class="container-fluid" id="header">
       <div class="row">
         <div class="ml-5 col-lg-8">
-          <h1 class="logo__title mt-3 mb-3">Fintess</h1>
-          <h3>Нужно придумать какую-нибудь фразу в строку</h3>
-          <div class>
+          <h1 class="logo__title">Fitness</h1>
+          <h3 class="text__heading_size_h3">
+            Нужно придумать какую-нибудь фразу в строку
+          </h3>
+          <div class="btn-block">
             <button
-              class="btn mr-4 header__btn mt-3 pt-2 pb-2"
-              @click="showModalAuth = !showModalAuth"
-            >
-              ВОЙТИ
-            </button>
-            <button
-              class="btn ml-5 header__btn mt-3 pt-2 pb-2"
+              class="btn__title btn__title_color_orange text__heading_size_h3"
               @click="showModal = !showModal"
             >
-              ЗАРЕГИСТРИРОВАТЬСЯ
+              Регистрация
+            </button>
+            <button
+              class="btn__title btn__title_color_transp text__heading_size_h3 marg20"
+              @click="showModalAuth = !showModalAuth"
+            >
+              Вход
             </button>
           </div>
         </div>
@@ -92,19 +94,63 @@ export default {
 
 @import '../assets/scss/variables.scss';
 .logo {
+  &__min {
+    font-style: normal;
+    font-weight: normal;
+    @include font-size($h1-font-size);
+    color: #03ada7;
+  }
   &__title {
+    position: relative;
     font-family: 'Sacramento';
     font-style: normal;
     font-weight: normal;
-
     @include font-size(160px);
     color: #db4b1a;
     border: 1px solid white;
+    max-width: 488px;
+    max-height: 177px;
+    &::after {
+      position: absolute;
+      bottom: 20px;
+      right: 5px;
+      font-family: 'Jura';
+      @include font-size($font-size-body20);
+      content: 'онлайн';
+      color: #312829;
+    }
   }
 }
 
-@media (max-width: 768px) {
-  .logo__title {
+.btn {
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    width: 188px;
+    padding: 10px 0;
+    box-sizing: border-box;
   }
+  &__title_color_orange {
+    border: 2px solid #db4b1a;
+    color: $color-white;
+    background-color: #db4b1a;
+  }
+  &__title_color_transp {
+    border: 2px solid #db4b1a;
+    color: $color-black;
+    background-color: transparent;
+  }
+  &:focus {
+    background: #cbff35;
+    border: #cbff35 solid 3px;
+  }
+  &:hover {
+    background: #bbf417;
+    border: #bbf417 solid 3px;
+  }
+}
+.marg20 {
+  margin-left: 20px;
 }
 </style>
