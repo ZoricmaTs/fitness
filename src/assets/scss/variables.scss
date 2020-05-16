@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  //line-height: 0;
 }
 $enable-responsive-font-sizes: true;
 
@@ -38,6 +39,6 @@ $color-blue: #03ada7;
 .text__heading_size_m {
   @include font-size($font-size-body14);
 }
-.text__heading_size_m {
+.text__heading_size_s {
   @include font-size($font-size-body12);
 }
