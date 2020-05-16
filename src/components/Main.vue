@@ -1,61 +1,6 @@
 <template>
   <section>
-    <header class="block-grid">
-      <h1 class="logo__min">Fitness</h1>
-      <nav class="navb text__heading_size_m">
-        <ul class="navb__list">
-          <li class="navb__item">Регистрация</li>
-          <li class="navb__item">Вход</li>
-          <li class="navb__item">О сервисе</li>
-          <li class="navb__item">Направления</li>
-          <li class="navb__item">Вопросы и ответы</li>
-          <li class="navb__item">Контакты</li>
-        </ul>
-      </nav>
-      <ul class="social__list">
-        <li class="social__list__item">
-          <a class="social__link" href="#">
-            <img
-              src="../assets/img/facebook 1.svg"
-              width="15"
-              height="15"
-              alt="social media facebook"
-            />
-          </a>
-        </li>
-        <li class="social__list__item">
-          <a class="social__link" href="#">
-            <img
-              src="../assets/img/social-media 1.svg"
-              width="15"
-              height="15"
-              alt="social media vkontakte"
-            />
-          </a>
-        </li>
-        <li class="social__list__item">
-          <a class="social__link" href="#">
-            <img
-              src="../assets/img/social-network 1.svg"
-              width="15"
-              height="15"
-              alt="social media instagram"
-            />
-          </a>
-        </li>
-        <li class="social__list__item">
-          <a class="social__link" href="#">
-            <img
-              src="../assets/img/twitter 1.svg"
-              width="15"
-              height="13"
-              alt="social media twitter"
-            />
-          </a>
-        </li>
-      </ul>
-    </header>
-
+    <Navbar />
     <section class="title-img" id="title-home">
       <div class="title-img-block">
         <h1 class="logo__title">Fitness</h1>
@@ -188,13 +133,15 @@ import RegisterForm from '@/components/Register.vue'
 import Authorization from '@/components/Authorization.vue'
 import SuccessRegister from '@/components/SuccessRegister.vue'
 import NotConfirmed from '@/components/NotConfirmed.vue'
+import Navbar from '@/components/Navbar.vue'
 
 export default {
   components: {
     RegisterForm,
     Authorization,
     SuccessRegister,
-    NotConfirmed
+    NotConfirmed,
+    Navbar
   },
   data() {
     return {
@@ -226,6 +173,7 @@ export default {
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
 @import '../assets/scss/variables.scss';
+
 .block-grid {
   padding: 0 25px;
 }
@@ -241,60 +189,8 @@ export default {
   padding: 100px 0 230px 0; ///пересмотреть момент на мобилке
 }
 
-.logo {
-  &__min {
-    position: relative;
-    font-family: 'Sacramento';
-    font-style: normal;
-    font-weight: normal;
-    @include font-size($h1-font-size);
-    color: $color-blue;
-    max-width: 133px;
-    max-height: 56px;
-    &::after {
-      position: absolute;
-      bottom: 0px;
-      right: 5px;
-      font-family: 'Jura';
-      @include font-size(15px);
-      content: 'онлайн';
-      color: $color-orange;
-    }
-  }
-  //navbar----------------------------------------------------------------------
-  .navb {
-    color: $color-dark-gray;
-    &__list {
-      list-style: none !important;
-    }
-  }
-  .navb__item {
-    //display: inline-block;
-    list-style: none !important;
-  }
+//----------------------------------------------------------------------------
 
-  //----------------------------------------------------------------------------
-  &__title {
-    position: relative;
-    font-family: 'Sacramento';
-    font-style: normal;
-    font-weight: normal;
-    max-width: 488px;
-    max-height: 177px;
-    border: 1px solid white;
-    @include font-size(160px);
-    color: $color-orange;
-    &::after {
-      position: absolute;
-      bottom: 20px;
-      right: 5px;
-      font-family: 'Jura';
-      @include font-size($font-size-body20);
-      content: 'онлайн';
-      color: $color-dark-gray;
-    }
-  }
-}
 ////
 .text-title {
   line-height: 21px;
@@ -397,7 +293,7 @@ export default {
   }
   &__text-reg {
     display: block;
-    
+
     max-width: 387px;
     padding: 18px;
     background-color: $color-orange;
