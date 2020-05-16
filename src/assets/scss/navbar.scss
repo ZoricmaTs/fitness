@@ -1,5 +1,4 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
-
 @import '../assets/scss/variables.scss';
 
 .logo {
@@ -74,9 +73,11 @@
   cursor: pointer;
   &:focus {
     color: $color-orange;
+    font-weight: 600;
   }
   &:hover {
     color: $color-orange;
+    font-weight: 600;
   }
 }
 .social {

@@ -84,7 +84,7 @@
         </p>
       </div>
     </section>
-    <section class="about-service">
+    <section class="about-service block-grid">
       <h1 class="about-service__heading text__heading_size_h1">
         Как работает наш сервис?
       </h1>
@@ -171,8 +171,9 @@ export default {
 
 <style lang="scss">
 @import '../../node_modules/bootstrap/scss/bootstrap';
-
 @import '../assets/scss/variables.scss';
+
+@import '../assets/scss/btn.scss';
 
 .block-grid {
   padding: 0 25px;
@@ -202,54 +203,18 @@ export default {
 }
 
 //buttons----------------------------------------------------------------------
-.btn {
-  &__title {
-    border-radius: 0 !important;
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: 0.05em;
-    width: 188px;
-    padding: 10px 0;
-    box-sizing: border-box;
-  }
-  &__title_color_orange {
-    border: 2px solid $color-orange;
-    color: $color-white;
-    background-color: $color-orange;
-    &:focus {
-      background: #cbff35;
-      border: #cbff35 solid 2px;
-    }
-    &:hover {
-      background: #bbf417;
-      border: #bbf417 solid 2px;
-    }
-  }
-  &__title_color_transp {
-    border: 2px solid $color-orange;
-    color: $color-black;
-    background-color: transparent;
-    &:focus {
-      background: #cbff35;
-      border: #cbff35 solid 2px;
-    }
-    &:hover {
-      background: #bbf417;
-      border: #bbf417 solid 2px;
-    }
-  }
-}
-.marg20 {
-  margin-left: 20px;
-}
+
 //-------------------------------------------------------
 .offers-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: block;
+  margin: auto;
+  width: 963px;
 }
 .offer {
+  display: inline-block;
   width: 291px;
+  margin-top: -54px;
+  margin-bottom: 62px;
   padding: 30px 20px 46px 20px;
   color: $color-white;
   background-color: $color-dark-gray;
@@ -276,10 +241,25 @@ export default {
       left: 0;
     }
   }
-  // .offers-block > div:nth-child(2) {
-  //   margin-right: 20px;
-  //   margin-left: 20px;
-  // }
+}
+.offers-block > div:nth-of-type(2) {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.offers-block > div:nth-of-type(3) {
+  position: relative;
+  transform-style: preserve-3d; //на задний план оранж квадрат
+  &::after {
+    position: absolute;
+
+    content: '';
+    top: 50px;
+    width: 291px;
+    height: 245px;
+    background-color: $color-orange;
+    // z-index: 0;
+    transform: translateZ(-1px); //на задний план оранж квадрат
+  }
 }
 //-------------------------------------------------------
 .about-service {
@@ -293,7 +273,6 @@ export default {
   }
   &__text-reg {
     display: block;
-
     max-width: 387px;
     padding: 18px;
     background-color: $color-orange;

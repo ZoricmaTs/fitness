@@ -1,0 +1,51 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../assets/scss/variables.scss';
+
+.btn {
+  &__title {
+    border-radius: 0 !important;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    width: 188px;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+  &__title_color_orange {
+    border: 2px solid $color-orange;
+    color: $color-white;
+    background-color: $color-orange;
+    &:focus {
+      background: $color-white;
+      border: $color-white solid 2px;
+      color: $color-orange;
+      font-weight: 600;
+    }
+    &:hover {
+      background: $color-white;
+      border: $color-white solid 2px;
+      color: $color-orange;
+      font-weight: 600;
+    }
+  }
+  &__title_color_transp {
+    border: 2px solid $color-orange;
+    color: $color-black;
+    background-color: transparent;
+    &:focus {
+      background: $color-white;
+      border: $color-white solid 2px;
+      color: $color-orange;
+      font-weight: 600;
+    }
+    &:hover {
+      background: $color-white;
+      border: $color-white solid 2px;
+      color: $color-orange;
+      font-weight: 600;
+    }
+  }
+}
+.marg20 {
+  margin-left: 20px;
+}
