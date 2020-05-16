@@ -59,6 +59,7 @@ import NotConfirmed from '@/components/NotConfirmed.vue'
 import Navbar from '@/components/Navbar.vue'
 import Homeoffers from '@/components/Homeoffers.vue'
 import Homeaboutserv from '@/components/Homeaboutserv.vue'
+import Homeattainment from '@/components/Homeattainment.vue'
 
 export default {
   components: {
@@ -68,7 +69,8 @@ export default {
     NotConfirmed,
     Navbar,
     Homeoffers,
-    Homeaboutserv
+    Homeaboutserv,
+    Homeattainment
   },
   data() {
     return {
@@ -103,6 +105,7 @@ export default {
 @import '../assets/scss/btn.scss';
 @import '../assets/scss/home-offers.scss';
 @import '../assets/scss/home-aboutserv.scss';
+@import '../assets/scss/home-attainment.scss';
 
 .block-grid {
   padding: 0 25px;

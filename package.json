@@ -1,5 +1,5 @@
 {
-  "name": "zpp",
+  "name": "Fitness_online",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,14 +9,13 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "core-js": "^3.6.4",
     "rfs": "^9.0.3",
-    "slick-carousel": "^1.8.1",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
     "vue-slick-carousel": "^1.0.5",
-    "vuex": "^3.1.3"
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
