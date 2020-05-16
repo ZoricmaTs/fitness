@@ -2,6 +2,10 @@
 @import '../../../node_modules/bootstrap/scss/functions.scss';
 @import '../../../node_modules/bootstrap/scss/variables';
 
+* {
+  margin: 0;
+  padding: 0;
+}
 $enable-responsive-font-sizes: true;
 
 $font-size-40: 2.5rem; // 40
@@ -15,9 +19,11 @@ $color-black: #000000;
 $color-orange: #db4b1a;
 $color-red: #ed5c4d;
 $color-white: #eff2f1;
+$color-blue: #03ada7;
 
 .text__heading_size_h1 {
   @include font-size($font-size-40);
+  font-weight: 600;
 }
 .text__heading_size_h2 {
   @include font-size($font-size-24);
