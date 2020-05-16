@@ -9,13 +9,13 @@
         </h3>
         <div class="btn-block">
           <button
-            class=" btn btn__title btn__title_color_orange text__heading_size_h3"
+            class="btn__title btn__title_color_orange text__heading_size_h3"
             @click="showModal = !showModal"
           >
             Регистрация
           </button>
           <button
-            class="btn btn__title btn__title_color_transp text__heading_size_h3 marg20"
+            class="btn__title btn__title_color_transp text__heading_size_h3 marg20"
             @click="showModalAuth = !showModalAuth"
           >
             Вход
@@ -23,86 +23,9 @@
         </div>
       </div>
     </section>
-    <section class="offers-block block-grid">
-      <div class="offer">
-        <h2 class="offer__heading text__heading_size_h2">
-          Занятия
-          <br />
-          в мини-группах
-        </h2>
-        <img
-          class="offer__img offer__img-1"
-          src="../assets/img/poses 1.svg"
-          alt="offer image"
-          width="77"
-          height="77"
-        />
-        <p class="offer__body text__heading_size_m">
-          Если вы всегда занимались<br />
-          в группах, наш сервис<br />
-          предостави вам возможность<br />
-          не изменять своим привычкам
-        </p>
-      </div>
-      <div class="offer">
-        <h2 class="offer__heading text__heading_size_h2">
-          Индивидуальные
-          <br />
-          занятия
-        </h2>
-        <img
-          class="offer__img offer__img-1"
-          src="../assets/img/tools-and-utensils 1.svg"
-          alt="offer image"
-          width="77"
-          height="77"
-        />
-        <p class="offer__body text__heading_size_m">
-          Мы заботимся о комфорте наших<br />
-          клиентов. Если вы чувствуете себя<br />
-          уверенне на индивидуальных<br />
-          занятия, наш сервис поможет вам<br />
-        </p>
-      </div>
-      <div class="offer">
-        <h2 class="offer__heading text__heading_size_h2">
-          Комфортные<br />
-          условия
-        </h2>
-        <img
-          class="offer__img offer__img-1"
-          src="../assets/img/hands-and-gestures 1.svg"
-          alt="offer image"
-          width="77"
-          height="77"
-        />
-        <p class="offer__body text__heading_size_m">
-          Занимайтесь где угодно,<br />
-          когда вам удобно и есть желание.<br />
-          Выбирайте тренера и начинайте<br />
-          дистигать своих целей<br />
-        </p>
-      </div>
-    </section>
-    <section class="about-service block-grid">
-      <h1 class="about-service__heading text__heading_size_h1">
-        Как работает наш сервис?
-      </h1>
-      <div class="about-service__block">
-        <div class="about-service__text-reg">
-          <h3 class="about-service__text-reg-heading text__heading_size_h3">
-            Регистрация
-          </h3>
-          <p class="about-service__text-reg-body">
-            Чтобы воспользоваться услугами сервиса, вы должны пройти
-            регистрацию, выбрав в роли кого хотите присутствовать на нашем
-            сервисе: тренер или тренирующийся.
-          </p>
-        </div>
-        <img class="about-service__img" src="../assets/img/nout.png" />
-      </div>
-    </section>
-
+    <Homeoffers />
+    <Homeaboutserv />
+    <Homeattainment />
     <RegisterForm
       v-if="showModal"
       @registration="onRegister"
@@ -134,6 +57,8 @@ import Authorization from '@/components/Authorization.vue'
 import SuccessRegister from '@/components/SuccessRegister.vue'
 import NotConfirmed from '@/components/NotConfirmed.vue'
 import Navbar from '@/components/Navbar.vue'
+import Homeoffers from '@/components/Homeoffers.vue'
+import Homeaboutserv from '@/components/Homeaboutserv.vue'
 
 export default {
   components: {
@@ -141,7 +66,9 @@ export default {
     Authorization,
     SuccessRegister,
     NotConfirmed,
-    Navbar
+    Navbar,
+    Homeoffers,
+    Homeaboutserv
   },
   data() {
     return {
@@ -174,6 +101,8 @@ export default {
 @import '../assets/scss/variables.scss';
 
 @import '../assets/scss/btn.scss';
+@import '../assets/scss/home-offers.scss';
+@import '../assets/scss/home-aboutserv.scss';
 
 .block-grid {
   padding: 0 25px;
@@ -205,93 +134,6 @@ export default {
 //buttons----------------------------------------------------------------------
 
 //-------------------------------------------------------
-.offers-block {
-  display: block;
-  margin: auto;
-  width: 963px;
-}
-.offer {
-  display: inline-block;
-  width: 291px;
-  margin-top: -54px;
-  margin-bottom: 62px;
-  padding: 30px 20px 46px 20px;
-  color: $color-white;
-  background-color: $color-dark-gray;
-  &__heading {
-    font-weight: bold;
-    line-height: 28px;
-    text-align: right;
-    margin-bottom: 0;
-  }
-  &__body {
-    line-height: 16px;
-    text-align: right;
-    margin-bottom: 0;
-  }
-  &__img {
-  }
-  &__img-1 {
-    position: relative;
 
-    &::before {
-      position: absolute;
-      content: url(../assets/img/Ellipse.svg);
-      top: 0;
-      left: 0;
-    }
-  }
-}
-.offers-block > div:nth-of-type(2) {
-  margin-right: 20px;
-  margin-left: 20px;
-}
-.offers-block > div:nth-of-type(3) {
-  position: relative;
-  transform-style: preserve-3d; //на задний план оранж квадрат
-  &::after {
-    position: absolute;
-
-    content: '';
-    top: 50px;
-    width: 291px;
-    height: 245px;
-    background-color: $color-orange;
-    // z-index: 0;
-    transform: translateZ(-1px); //на задний план оранж квадрат
-  }
-}
 //-------------------------------------------------------
-.about-service {
-  background-color: $color-dark-gray;
-  &__heading {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 47px;
-    color: $color-white;
-  }
-  &__text-reg {
-    display: block;
-    max-width: 387px;
-    padding: 18px;
-    background-color: $color-orange;
-    color: $color-white;
-  }
-  &__text-reg-heading {
-    font-style: normal;
-    font-weight: bold;
-    line-height: 21px;
-  }
-  &__text-reg-body {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 0;
-  }
-  &__img {
-    position: absolute;
-  }
-}
 </style>
