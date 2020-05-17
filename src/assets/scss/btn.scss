@@ -29,7 +29,7 @@
       font-weight: 600;
     }
   }
-  &__title_color_transp {
+  &__title_color_transp-orange {
     border: 2px solid $color-orange;
     color: $color-black;
     background-color: transparent;
@@ -43,6 +43,41 @@
       background: $color-white;
       border: $color-white solid 2px;
       color: $color-orange;
+      font-weight: 600;
+    }
+  }
+  //--------
+  &__title_color_blue {
+    border: 2px solid $color-blue;
+    color: $color-white;
+    background-color: $color-blue;
+    &:focus {
+      background: $color-white;
+      border: $color-white solid 2px;
+      color: $color-blue;
+      font-weight: 600;
+    }
+    &:hover {
+      background: $color-white;
+      border: $color-white solid 2px;
+      color: $color-blue;
+      font-weight: 600;
+    }
+  }
+  &__title_color_transp-blue {
+    border: 2px solid $color-blue;
+    color: $color-black;
+    background-color: transparent;
+    &:focus {
+      background: $color-white;
+      border: $color-white solid 2px;
+      color: $color-blue;
+      font-weight: 600;
+    }
+    &:hover {
+      background: $color-white;
+      border: $color-white solid 2px;
+      color: $color-blue;
       font-weight: 600;
     }
   }
