@@ -44,16 +44,18 @@
         </div>
       </div>
     </section>
-    <div class="attainment__register block-grid">
-      <span
-        class="attainment__heading attainment__heading_color_gray text__heading_size_h1"
-      >Готовы приступить</span>
-      <span class="attainment__heading attainment__heading_color_white text__heading_size_h1">_</span>
-      <span
-        class="attainment__heading attainment__heading_color_blue text__heading_size_h1"
-      >тренировкам</span>
-      <span class="attainment__heading attainment__heading_color_gray text__heading_size_h1">?</span>
-      <div class="btn-block block-grid">
+    <div class="attainment__register">
+      <div class="attainment__heading-block">
+        <span
+          class="attainment__heading attainment__heading_color_gray text__heading_size_h1"
+        >Готовы приступить</span>
+        <span class="attainment__heading attainment__heading_color_white text__heading_size_h1">_</span>
+        <span
+          class="attainment__heading attainment__heading_color_blue text__heading_size_h1"
+        >тренировкам</span>
+        <span class="attainment__heading attainment__heading_color_gray text__heading_size_h1">?</span>
+      </div>
+      <div class="attainment__btn">
         <button
           class="btn__title btn__title_color_blue text__heading_size_h3"
           @click="showModal = !showModal"
@@ -149,7 +151,8 @@ export default {
 @import '../assets/scss/footer.scss';
 
 .block-grid {
-  padding: 0 25px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .title-img {
   padding: 0 25px;
