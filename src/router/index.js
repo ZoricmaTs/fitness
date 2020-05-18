@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import ProfileUser from '../views/ProfileUser.vue'
 import ProfileTrainer from '../views/ProfileTrainer.vue'
+import EmailConfirmation from '../views/EmailConfirmation.vue'
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,12 @@ const routes = [
     name: 'profiletrainer',
     component: ProfileTrainer,
     props: true
+  },
+  {
+    path: '/email_confirmation',
+    name: 'email_confirmation', //для роутеров
+    component: EmailConfirmation,
+    props: route => ({ email: route.query.email, code: route.query.code })
   }
 ]
 
