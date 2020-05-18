@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+const BASE_API_URL = 'http://80.89.238.253:5000/api'
 export default {
   state: {
     status: '',
@@ -42,7 +42,7 @@ export default {
     async login({ commit }, logindata) {
       try {
         const resp = await axios({
-          url: `${BASE_API_URL}/login`,
+          url: `${BASE_API_URL}/signin`,
           data: logindata, //data register  передача данных ч/з dispatch
           method: 'POST'
         })
