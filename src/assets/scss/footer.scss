@@ -22,15 +22,14 @@
     width: 188px;
   }
   &__link-email {
-    //font-family: 'Raleway-Bold';
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
     @include font-size(13px);
     color: $color-white;
     line-height: 16px;
   }
   &__menu {
-    width: 134px;
+    width: 135px;
     margin-left: 123px;
     margin-right: 73px;
   }
@@ -52,6 +51,7 @@
     text-decoration: underline;
     font-style: normal;
     font-weight: normal;
+    margin-bottom: 5px;
     line-height: 16px;
   }
   &__menu-link {

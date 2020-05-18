@@ -16,22 +16,22 @@
         </p>
         <ul class="footer-block__menu-list">
           <li class="footer-block__menu-item">
-            <a class="footer-block__menu-link" href="#">Регистрация</a>
+            <a class="footer-block__menu-link text__heading_size_m" href="#">Регистрация</a>
           </li>
           <li class="footer-block__menu-item">
-            <a class="footer-block__menu-link" href="#">Вход</a>
+            <a class="footer-block__menu-link text__heading_size_m" href="#">Вход</a>
           </li>
           <li class="footer-block__menu-item">
-            <a class="footer-block__menu-link" href="#">О сервисе</a>
+            <a class="footer-block__menu-link text__heading_size_m" href="#">О сервисе</a>
           </li>
           <li class="footer-block__menu-item">
-            <a class="footer-block__menu-link" href="#">Направления</a>
+            <a class="footer-block__menu-link text__heading_size_m" href="#">Направления</a>
           </li>
           <li class="footer-block__menu-item">
-            <a class="footer-block__menu-link" href="#">Вопросы и ответы</a>
+            <a class="footer-block__menu-link text__heading_size_m" href="#">Вопросы и ответы</a>
           </li>
           <li class="footer-block__menu-item">
-            <a class="footer-block__menu-link" href="#">Контакты</a>
+            <a class="footer-block__menu-link text__heading_size_m" href="#">Контакты</a>
           </li>
         </ul>
       </div>
