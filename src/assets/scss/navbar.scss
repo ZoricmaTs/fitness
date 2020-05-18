@@ -71,13 +71,12 @@
 .navb__item {
   list-style-type: none;
   cursor: pointer;
+  padding: 0 5px;
   &:focus {
-    color: $color-orange;
-    font-weight: 600;
+    background-color: $color-blue;
   }
   &:hover {
-    color: $color-orange;
-    font-weight: 600;
+    background-color: $color-blue;
   }
 }
 .social {

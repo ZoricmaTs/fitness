@@ -11,7 +11,7 @@
             @click="showModal = !showModal"
           >Регистрация</button>
           <button
-            class="btn__title title_color_transp-orange text__heading_size_h3 marg20"
+            class="btn__title btn__title_color_transp-orange text__heading_size_h3 marg20"
             @click="showModalAuth = !showModalAuth"
           >Вход</button>
         </div>
@@ -61,7 +61,7 @@
           @click="showModal = !showModal"
         >Регистрация</button>
         <button
-          class="btn__title title_color_transp-blue text__heading_size_h3 marg20"
+          class="btn__title btn__title_color_transp-blue text__heading_size_h3 marg20"
           @click="showModalAuth = !showModalAuth"
         >Вход</button>
       </div>

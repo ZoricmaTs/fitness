@@ -5,7 +5,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway';
   //line-height: 0;
 }
 $enable-responsive-font-sizes: true;
@@ -19,10 +18,12 @@ $font-size-body12: 0.75rem;
 $color-dark-gray: #312829;
 $color-black: #000000;
 $color-orange: #db4b1a;
+$color-dark-orange: #c2451b;
 $color-red: #ed5c4d;
 $color-white: #eff2f1;
 $color-light-gray: #b0b0b0;
 $color-blue: #03ada7;
+$color-dark-blue: #039792;
 
 .text__heading_size_h1 {
   @include font-size($font-size-40);

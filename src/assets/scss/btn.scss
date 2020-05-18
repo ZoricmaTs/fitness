@@ -17,16 +17,12 @@
     color: $color-white;
     background-color: $color-orange;
     &:focus {
-      background: $color-white;
-      border: $color-white solid 2px;
-      color: $color-orange;
-      font-weight: 600;
+      background: $color-dark-orange;
+      border: $color-dark-orange solid 2px;
     }
     &:hover {
-      background: $color-white;
-      border: $color-white solid 2px;
-      color: $color-orange;
-      font-weight: 600;
+      background: $color-dark-orange;
+      border: $color-dark-orange solid 2px;
     }
   }
   &__title_color_transp-orange {
@@ -34,16 +30,10 @@
     color: $color-black;
     background-color: transparent;
     &:focus {
-      background: $color-white;
-      border: $color-white solid 2px;
-      color: $color-orange;
-      font-weight: 600;
+      border: $color-dark-orange solid 2px;
     }
     &:hover {
-      background: $color-white;
-      border: $color-white solid 2px;
-      color: $color-orange;
-      font-weight: 600;
+      border: $color-dark-orange solid 2px;
     }
   }
   //--------
@@ -52,16 +42,12 @@
     color: $color-white;
     background-color: $color-blue;
     &:focus {
-      background: $color-white;
-      border: $color-white solid 2px;
-      color: $color-blue;
-      font-weight: 600;
+      background-color: $color-dark-blue;
+      border: $color-dark-blue solid 2px;
     }
     &:hover {
-      background: $color-white;
-      border: $color-white solid 2px;
-      color: $color-blue;
-      font-weight: 600;
+      background-color: $color-dark-blue;
+      border: $color-dark-blue solid 2px;
     }
   }
   &__title_color_transp-blue {
@@ -69,16 +55,10 @@
     color: $color-black;
     background-color: transparent;
     &:focus {
-      background: $color-white;
-      border: $color-white solid 2px;
-      color: $color-blue;
-      font-weight: 600;
+      border: $color-dark-blue solid 2px;
     }
     &:hover {
-      background: $color-white;
-      border: $color-white solid 2px;
-      color: $color-blue;
-      font-weight: 600;
+      border: $color-dark-blue solid 2px;
     }
   }
 }
