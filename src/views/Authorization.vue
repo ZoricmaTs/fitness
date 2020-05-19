@@ -1,29 +1,41 @@
 <template>
-  <form class @submit.prevent="login">
-    <div class="form-block">
-      <label for="email" class="form-modal__label">Введите email:</label>
-      <input
-        type="email"
-        name="email"
-        placeholder="Email:"
-        class="form-modal__input"
-        v-model="email"
-      />
-      <div class="form-modal__err">{{ errArray['email'] ? errArray['email'].toString() : '' }}</div>
-    </div>
-    <div class="form-block">
-      <label for="password" class="form-modal__label">Введите пароль:</label>
-      <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        class="form-modal__input"
-        v-model="password"
-      />
-    </div>
-    <div class="form-modal__link">У Вас нет аккаунта? Зарегистрируйтесь</div>
-    <button type="submit" class="btn header__btn-large">ВОЙТИ</button>
-  </form>
+  <section class="singin-bg">
+    <router-link :to="{ name: 'Home' }">назад</router-link>
+    <form class="block-grid" @submit.prevent="login">
+      <h1 class="logo__title">Fitness</h1>
+      <div class="form-blocks">
+        <h1 class="singin__heading text__heading_size_h1">Вход в систему</h1>
+        <div class="form-block">
+          <div class="singin__err">
+            {{ errArray['email'] ? errArray['email'].toString() : '' }}
+          </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Ваш  e-mail"
+            class="singin__input text__heading_size_h2"
+            v-model="email"
+          />
+        </div>
+        <div class="form-block">
+          <div class="singin__err">
+            {{ errArray['email'] ? errArray['email'].toString() : '' }}
+          </div>
+          <input
+            type="password"
+            name="password"
+            placeholder="Пароль"
+            class="singin__input text__heading_size_h2"
+            v-model="password"
+          />
+        </div>
+        <div class="form-modal__link">
+          У Вас нет аккаунта? Зарегистрируйтесь
+        </div>
+        <button type="submit" class="btn">ВОЙТИ</button>
+      </div>
+    </form>
+  </section>
 </template>
 
 <script>
@@ -91,4 +103,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../assets/scss/registers.scss';
+@import '../assets/scss/variables.scss';
+</style>

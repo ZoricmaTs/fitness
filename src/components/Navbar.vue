@@ -60,7 +60,6 @@
 </template>
 
 <script>
-//import Authorization from '@/vuews/Authorization.vue'
 export default {}
 </script>
 

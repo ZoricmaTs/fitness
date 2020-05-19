@@ -1,13 +1,45 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../assets/scss/variables.scss';
+
+.singin-bg {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-blue;
+  background-image: url('../assets/img/signinbg.png');
+  background-size: cover;
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.singin {
+  &__heading {
+    line-height: 47px;
+    color: $color-orange;
+  }
+  &__input {
+    font-style: normal;
+    font-weight: normal;
+    line-height: 28px;
+    color: rgb(219, 76, 26 /0.4);
+    background: $color-white;
+    letter-spacing: 0.05em;
+    padding: 20px 25px;
+    margin-bottom: 35px;
+    outline: none;
+    &:placeholder {
+      color: rgb(219, 76, 26 /0.4);
+    }
+    &:hover {
+    }
+    &:focus {
+    }
+  }
+}
+
 .radio-buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 15px;
-  margin-bottom: 15px;
-  letter-spacing: 0.05em;
 }
 
 .radio-buttons-role__input:checked,
@@ -108,32 +140,13 @@
   &__input:checked + &__box {
     fill: white;
     background: url('../assets/img/checked.svg') center no-repeat;
-    //border: 1px solid #30b700;
   }
 }
-.header__btn-large {
-  max-width: 333px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0.1em;
-  width: 100%;
-  padding: 10px 0;
-  color: white !important;
-  background: #cbf74f;
-  border: #cbf74f solid 3px;
-  box-sizing: border-box;
-  border-radius: 30px;
 
-  &:focus {
-    background: #cbff35;
-    border: #cbff35 solid 3px;
-  }
-  &:hover {
-    background: #bbf417;
-    border: #bbf417 solid 3px;
-  }
+.form-blocks {
+  max-width: 521px;
+  background-color: $color-dark-gray;
+  padding: 50px 74px;
 }
 .form-block {
   display: flex;
@@ -152,37 +165,6 @@
     text-align: center;
     letter-spacing: 0.05em;
     color: #333333;
-  }
-  &__label {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 150%;
-    letter-spacing: 0.05em;
-    color: #333333;
-  }
-  &__input {
-    font-family: 'Montserrat-Italic';
-    font-size: 11px;
-    color: #828282;
-    letter-spacing: 0.05em;
-    padding: 10px;
-    margin-bottom: 30px;
-    outline: none;
-    background: #ffffff;
-    border: 1px solid #cbf74f;
-    box-sizing: border-box;
-    border-radius: 18px;
-    &:hover {
-      outline: none;
-      border: 1px solid #8fff00;
-      box-sizing: border-box;
-    }
-    &:focus {
-      outline: none;
-      border: 1px solid #30b700;
-      box-sizing: border-box;
-    }
   }
   &__err {
     font-family: 'Montserrat-Italic';
