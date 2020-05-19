@@ -15,7 +15,7 @@
           <input
             type="email"
             name="email"
-            placeholder="Ваш  e-mail"
+            placeholder="Ваш e-mail"
             class="singin__input text__heading_size_h2"
             v-model="email"
           />

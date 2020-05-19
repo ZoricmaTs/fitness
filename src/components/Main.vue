@@ -134,10 +134,6 @@ export default {
 @import '../assets/scss/home-attainment.scss';
 @import '../assets/scss/footer.scss';
 
-.block-grid {
-  padding-left: 25px;
-  padding-right: 25px;
-}
 .title-img {
   padding: 0 25px;
   background-image: url('../assets/img/image8.png');
