@@ -65,24 +65,24 @@
           <input
             class="radio-buttons-role__input"
             type="radio"
-            id="user"
+            id="trainer"
             name="role"
-            value="user"
+            value="trainer"
             v-model="role"
             checked
           />
-          <label for="user" class="radio-buttons-role__label">Хочу тренироваться</label>
+          <label for="trainer" class="radio-buttons-role__label">Хочу быть тренером</label>
         </div>
         <div class="radio-buttons-role">
           <input
             class="radio-buttons-role__input"
             type="radio"
-            id="trainer"
+            id="user"
             name="role"
-            value="trainer"
+            value="user"
             v-model="role"
           />
-          <label for="trainer" class="radio-buttons-role__label">Хочу тренировать</label>
+          <label for="user" class="radio-buttons-role__label">Хочу тренироваться</label>
         </div>
       </div>
       <label class="check option-check">
