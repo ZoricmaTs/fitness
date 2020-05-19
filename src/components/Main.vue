@@ -7,7 +7,7 @@
         <h3 class="text__heading_size_h3 text-title">Нужно придумать какую-нибудь фразу в строку</h3>
         <div class="btn-block">
           <router-link :to="{ name: 'signup' }">
-            <button class="btn__title btn__title_color_orange text__heading_size_h3">Регистрация</button>
+            <button class="btn__title btn__title_color_orangew text__heading_size_h3">Регистрация</button>
           </router-link>
           <router-link :to="{ name: 'signin' }">
             <button

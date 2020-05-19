@@ -1,9 +1,13 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import '../assets/scss/variables.scss';
+@import '../assets/scss/btn.scss';
 
 .singin-bg {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: $color-blue;
   background-image: url('../assets/img/signinbg.png');
   background-size: cover;
@@ -12,9 +16,31 @@
   background-repeat: no-repeat;
 }
 .singin {
+  margin-right: 189px;
+  margin-bottom: 126px; //пересмотреть на мобилке
+  &__linkback {
+    position: relative;
+    line-height: 23px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: $color-dark-gray;
+    &:hover,
+    &:focus {
+      color: $color-dark-gray;
+      opacity: 0.5;
+    }
+    // &::after {
+    //   position: absolute;
+    //   content: url('../img/Arrow.svg');
+    // }
+  }
+  &__logo {
+    margin-bottom: 25px;
+  }
   &__heading {
     line-height: 47px;
     color: $color-orange;
+    margin-bottom: 40px;
   }
   &__input {
     font-style: normal;
@@ -25,13 +51,51 @@
     letter-spacing: 0.05em;
     padding: 20px 25px;
     margin-bottom: 35px;
+    border: 2px solid $color-white;
     outline: none;
-    &:placeholder {
-      color: rgb(219, 76, 26 /0.4);
+    &::placeholder {
+      color: rgba(219, 76, 26, 0.4);
     }
     &:hover {
+      border: 2px solid #db3d1a;
+      box-sizing: border-box;
     }
     &:focus {
+      border: 2px solid #db3d1a;
+      box-sizing: border-box;
+    }
+  }
+  &__err {
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-orange;
+  }
+  &__block-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__link {
+    display: block;
+    cursor: pointer;
+    text-decoration: underline;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 5px;
+    line-height: 16px;
+  }
+  &__link_color-white {
+    color: $color-white;
+    &:hover,
+    &:focus {
+      color: $color-light-gray;
+    }
+  }
+  &__link_color-orange {
+    color: $color-orange;
+    &:hover,
+    &:focus {
+      color: $color-dark-orange;
     }
   }
 }
@@ -154,27 +218,6 @@
   justify-content: center;
 }
 .form-modal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  &__heading {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    letter-spacing: 0.05em;
-    color: #333333;
-  }
-  &__err {
-    font-family: 'Montserrat-Italic';
-    font-size: 9px;
-    line-height: 11px;
-    letter-spacing: 0.05em;
-    color: #eb5757;
-    margin-top: -25px;
-    margin-bottom: 10px;
-  }
   &__policy {
     font-family: 'Montserrat-Italic';
     font-size: 9px;

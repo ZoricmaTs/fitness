@@ -1,14 +1,17 @@
 <template>
-  <section class="singin-bg">
-    <router-link :to="{ name: 'Home' }">назад</router-link>
-    <form class="block-grid" @submit.prevent="login">
-      <h1 class="logo__title">Fitness</h1>
+  <section class="singin-bg block-grid">
+    <router-link :to="{ name: 'Home' }" class="singin__linkback text__heading_size_l">
+      <img src="../assets/img/Arrow.svg" alt="backlink" />
+      Назад
+    </router-link>
+    <form class="singin" @submit.prevent="login">
+      <h1 class="singin__logo logo__title">Fitness</h1>
       <div class="form-blocks">
         <h1 class="singin__heading text__heading_size_h1">Вход в систему</h1>
         <div class="form-block">
-          <div class="singin__err">
-            {{ errArray['email'] ? errArray['email'].toString() : '' }}
-          </div>
+          <div
+            class="singin__err text__heading_size_h3"
+          >{{ errArray['email'] ? errArray['email'].toString() : '' }}</div>
           <input
             type="email"
             name="email"
@@ -18,9 +21,9 @@
           />
         </div>
         <div class="form-block">
-          <div class="singin__err">
-            {{ errArray['email'] ? errArray['email'].toString() : '' }}
-          </div>
+          <div
+            class="singin__err text__heading_size_h3"
+          >{{ errArray['email'] ? errArray['email'].toString() : '' }}</div>
           <input
             type="password"
             name="password"
@@ -29,10 +32,22 @@
             v-model="password"
           />
         </div>
-        <div class="form-modal__link">
-          У Вас нет аккаунта? Зарегистрируйтесь
+        <div class="singin__block-btn">
+          <div class="singin__block-link">
+            <a
+              href="#"
+              class="singin__link singin__link_color-white text__heading_size_m"
+            >Регистрация/</a>
+            <a
+              href="#"
+              class="singin__link singin__link_color-orange text__heading_size_m"
+            >Забыли пароль?</a>
+          </div>
+          <button
+            type="submit"
+            class="btn__title btn__title_color_orangeb text__heading_size_h3"
+          >ВОЙТИ</button>
         </div>
-        <button type="submit" class="btn">ВОЙТИ</button>
       </div>
     </form>
   </section>

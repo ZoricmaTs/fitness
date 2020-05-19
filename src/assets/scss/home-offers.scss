@@ -33,12 +33,12 @@
   &__img-1 {
     position: relative;
 
-    &::before {
-      position: absolute;
-      content: url(../assets/img/Ellipse.svg);
-      top: 0;
-      left: 0;
-    }
+    // &:before {
+    //   position: absolute;
+    //   content: url('../assets/img/Ellipse.svg');
+    //   top: 0;
+    //   left: 0;
+    // }
   }
 }
 .offers-block > div:nth-of-type(2) {
