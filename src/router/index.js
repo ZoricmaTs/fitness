@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import ProfileUser from '../views/ProfileUser.vue'
 import ProfileTrainer from '../views/ProfileTrainer.vue'
 import EmailConfirmation from '../views/EmailConfirmation.vue'
+import Authorization from '../views/Authorization.vue'
+import Register from '../views/Register.vue'
 
 Vue.use(VueRouter)
 
@@ -12,6 +14,16 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/signin',
+    name: 'signin',
+    component: Authorization
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: Register
   },
   {
     path: '/profileuser/:id',

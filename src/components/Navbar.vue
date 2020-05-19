@@ -5,6 +5,7 @@
       <nav class="navb text__heading_size_m">
         <ul class="navb__list">
           <li class="navb__item">Регистрация</li>
+
           <li class="navb__item">Вход</li>
           <li class="navb__item">О сервисе</li>
           <li class="navb__item">Направления</li>
@@ -59,6 +60,7 @@
 </template>
 
 <script>
+//import Authorization from '@/vuews/Authorization.vue'
 export default {}
 </script>
 
