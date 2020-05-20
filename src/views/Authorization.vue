@@ -47,10 +47,10 @@
         </div>
         <div class="singin__block-btn">
           <div class="singin__block-link">
-            <a
-              href="#"
+            <router-link
+              :to="{ name: 'signup' }"
               class="singin__link singin__link_color-white text__heading_size_m"
-              >Регистрация/</a
+              >Регистрация/</router-link
             >
             <a
               href="#"

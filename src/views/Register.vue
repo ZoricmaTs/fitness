@@ -74,7 +74,9 @@
             v-model="role"
             checked
           />
-          <label for="trainer" class="radio-buttons-role__label"
+          <label
+            for="trainer"
+            class="radio-buttons-role__label text__heading_size_h3"
             >Хочу быть тренером</label
           >
         </div>
@@ -87,7 +89,9 @@
             value="user"
             v-model="role"
           />
-          <label for="user" class="radio-buttons-role__label"
+          <label
+            for="user"
+            class="radio-buttons-role__label text__heading_size_h3"
             >Хочу тренироваться</label
           >
         </div>
@@ -105,7 +109,7 @@
       <button
         type="submit"
         :disabled="!checked_policy"
-        class="btn header__btn-large"
+        class="btn__title btn__title_color_orangeb text__heading_size_h3"
       >
         ЗАРЕГИСТРИРОВАТЬСЯ
       </button>

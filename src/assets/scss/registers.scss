@@ -231,17 +231,16 @@
 .radio-buttons-role__input:not(:checked) + .radio-buttons-role__label {
   position: relative;
   display: inline-block;
-  padding-left: 20px;
+  padding-left: 40px;
   cursor: pointer;
 }
 .radio-buttons-role__input:checked + .radio-buttons-role__label:before {
   content: '';
   position: absolute;
   left: 0;
-  top: 0;
+  top: 10px; //------
   width: 26px;
   height: 26px;
-  color: #cbf74f;
   box-sizing: border-box;
   background: $color-white;
 }
@@ -249,7 +248,7 @@
   content: '';
   position: absolute;
   left: 0;
-  top: 0;
+  top: 10px; //------
   width: 26px;
   height: 26px;
   background: $color-white;
@@ -257,12 +256,12 @@
 }
 .radio-buttons-role__input:checked + .radio-buttons-role__label:after {
   position: absolute;
-  top: 3px;
+  top: 13px; //------
   left: 3px;
   content: '';
-  width: 8px;
-  height: 8px;
-  background-color: #cbf74f;
+  width: 20px;
+  height: 18px;
+  background: url('../assets/img/checked.svg') center no-repeat;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -270,13 +269,20 @@
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
-  color: #cbf74f;
+  width: 20px;
+  height: 18px;
+  background: url('../assets/img/checked.svg') center no-repeat;
 }
 .radio-buttons-role__input:checked + .radio-buttons-role__label:after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+.radio-buttons-role__label {
+  color: $color-white !important;
+  max-width: 153px;
+}
+
 //--------------------------------------
 .check {
   padding-left: 20px;
@@ -304,12 +310,6 @@
     flex-direction: column;
     margin-left: 2px;
     margin-bottom: 30px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.05em;
-    color: #333333;
   }
 
   &__input:checked + &__box {
