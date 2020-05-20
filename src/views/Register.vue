@@ -100,16 +100,23 @@
         <input class="check__input" type="checkbox" v-model="checked_policy" />
         <span class="check__box"></span>
         <div class="check__text">
-          <span class>Согласен с политикой конфиденциальности</span>
+          <span class="check__text-body text__heading_size_m"
+            >Нажимая кнопку “Зарегистрироваться”, я принимаю
+            <a href="#" class="check__text-body-link"
+              >пользовательское соглашение</a
+            >
+            и соглашаюсь с правилами использования и обработки персональных
+            данных</span
+          >
         </div>
       </label>
-      <div class="form-modal__policy" v-show="checked_policy == false">
+      <div class="check__policy signin__err" v-show="checked_policy == false">
         “Необходимо указать, что вы согласны с политикой конфиденциальности”.
       </div>
       <button
         type="submit"
         :disabled="!checked_policy"
-        class="btn__title btn__title_color_orangeb text__heading_size_h3"
+        class="btn__title btn__title_color_orangeb text__heading_size_h3 signup__btn"
       >
         ЗАРЕГИСТРИРОВАТЬСЯ
       </button>

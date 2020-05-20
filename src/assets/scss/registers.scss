@@ -215,6 +215,11 @@
       color: $color-dark-orange;
     }
   }
+  &__btn {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    margin: 0 auto;
+  }
 }
 .radio-buttons {
   display: flex;
@@ -285,7 +290,7 @@
 
 //--------------------------------------
 .check {
-  padding-left: 20px;
+  padding-left: 40px;
   &__input {
     position: absolute;
     width: 1px; /*firefox*/
@@ -296,11 +301,12 @@
 
   &__box {
     position: absolute;
-    margin-top: 0px;
-    margin-left: -20px;
+    margin-top: 20px;
+    margin-left: -40px;
     width: 26px;
     height: 26px;
-    background: #ffffff;
+    background: $color-white;
+    fill: $color-white;
     border: 1px solid #e0e0e0;
     box-sizing: border-box;
   }
@@ -311,9 +317,21 @@
     margin-left: 2px;
     margin-bottom: 30px;
   }
-
+  &__text-body {
+    color: $color-white;
+  }
+  &__text-body-link {
+    color: $color-blue;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $color-dark-blue;
+    }
+  }
   &__input:checked + &__box {
-    fill: white;
+    background: $color-white;
+    fill: $color-white;
     background: url('../assets/img/checked.svg') center no-repeat;
   }
 }
@@ -329,20 +347,9 @@
   justify-content: center;
 }
 .form-modal {
-  &__policy {
-    font-family: 'Montserrat-Italic';
-    font-size: 9px;
-    line-height: 11px;
-    letter-spacing: 0.05em;
-    color: #eb5757;
-    margin-top: -30px;
-    margin-bottom: 15px;
-  }
   &__text-block {
     font-style: normal;
     font-size: 14px;
     line-height: 150%;
-    letter-spacing: 0.05em;
-    color: #333333;
   }
 }
