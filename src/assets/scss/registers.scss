@@ -75,6 +75,32 @@
       box-sizing: border-box;
     }
   }
+  &__input-pass-block {
+    position: relative;
+    width: 373px;
+  }
+
+  &__input-pass {
+    padding-right: 33px;
+    width: 373px;
+  }
+  &__showpass {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+  }
+  &__input-passbtn {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  &__icon {
+    color: $color-light-gray;
+  }
   &__err {
     font-size: 18px;
     line-height: 22px;

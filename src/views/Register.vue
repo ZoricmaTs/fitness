@@ -1,15 +1,18 @@
 <template>
   <section class="singup-bg block-grid">
-    <router-link :to="{ name: 'Home' }" class="singin__linkback text__heading_size_l">
+    <router-link
+      :to="{ name: 'Home' }"
+      class="singin__linkback text__heading_size_l"
+    >
       <img src="../assets/img/Arrow.svg" alt="backlink" />
       Назад
     </router-link>
     <form class="singup" @submit.prevent="registers">
       <h1 class="singup__heading text__heading_size_h1">Регистрация</h1>
       <div class="form-block">
-        <div
-          class="singup__err text__heading_size_h3"
-        >{{ errArray['email'] ? errArray['email'].toString() : '' }}</div>
+        <div class="singup__err text__heading_size_h3">
+          {{ errArray['email'] ? errArray['email'].toString() : '' }}
+        </div>
         <input
           type="name"
           name="name"
@@ -19,9 +22,9 @@
         />
       </div>
       <div class="form-block">
-        <div
-          class="singup__err text__heading_size_h3"
-        >{{ errArray['email'] ? errArray['email'].toString() : '' }}</div>
+        <div class="singup__err text__heading_size_h3">
+          {{ errArray['email'] ? errArray['email'].toString() : '' }}
+        </div>
 
         <input
           type="email"
@@ -32,9 +35,9 @@
         />
       </div>
       <div class="form-block">
-        <div
-          class="singup__err text__heading_size_h3"
-        >{{ errArray['password'] ? errArray['password'].toString() : '' }}</div>
+        <div class="singup__err text__heading_size_h3">
+          {{ errArray['password'] ? errArray['password'].toString() : '' }}
+        </div>
 
         <input
           type="password"
@@ -47,9 +50,9 @@
       <div class="form-block">
         <div class="singup__err text__heading_size_h3">
           {{
-          errArray['password_confirmation']
-          ? errArray['password_confirmation'].toString()
-          : ''
+            errArray['password_confirmation']
+              ? errArray['password_confirmation'].toString()
+              : ''
           }}
         </div>
         <input
@@ -71,7 +74,9 @@
             v-model="role"
             checked
           />
-          <label for="trainer" class="radio-buttons-role__label">Хочу быть тренером</label>
+          <label for="trainer" class="radio-buttons-role__label"
+            >Хочу быть тренером</label
+          >
         </div>
         <div class="radio-buttons-role">
           <input
@@ -82,7 +87,9 @@
             value="user"
             v-model="role"
           />
-          <label for="user" class="radio-buttons-role__label">Хочу тренироваться</label>
+          <label for="user" class="radio-buttons-role__label"
+            >Хочу тренироваться</label
+          >
         </div>
       </div>
       <label class="check option-check">
@@ -92,15 +99,16 @@
           <span class>Согласен с политикой конфиденциальности</span>
         </div>
       </label>
-      <div
-        class="form-modal__policy"
-        v-show="checked_policy == false"
-      >“Необходимо указать, что вы согласны с политикой конфиденциальности”.</div>
+      <div class="form-modal__policy" v-show="checked_policy == false">
+        “Необходимо указать, что вы согласны с политикой конфиденциальности”.
+      </div>
       <button
         type="submit"
         :disabled="!checked_policy"
         class="btn header__btn-large"
-      >ЗАРЕГИСТРИРОВАТЬСЯ</button>
+      >
+        ЗАРЕГИСТРИРОВАТЬСЯ
+      </button>
     </form>
   </section>
 </template>

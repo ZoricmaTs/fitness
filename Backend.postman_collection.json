@@ -1,0 +1,453 @@
+{
+	"info": {
+		"_postman_id": "52609471-9175-4821-9f4b-6dfc7c3b1162",
+		"name": "Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "SIGNIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "1@mail.ru",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "223322",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://80.89.238.253:5000/api/signin?token=FFPOZGMXGNHWUYOP3TSOEC7HEI",
+							"protocol": "http",
+							"host": [
+								"80",
+								"89",
+								"238",
+								"253"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"signin"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "FFPOZGMXGNHWUYOP3TSOEC7HEI"
+								}
+							]
+						},
+						"description": "class LoginForm(FlaskForm):\n    email = StringField(\"email\",\n                        validators=[\n                            Length(max=256, message=\"email can't be longer then 256\"),\n                            Email(message=\"email is incorrect\")\n                        ])\n    password = PasswordField(\"password\")\n"
+					},
+					"response": []
+				},
+				{
+					"name": "SIGNUP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "1@mail.ru",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "223322",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "223322",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "user",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Иван",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://80.89.238.253:5000/api/signup?token=FFPOZGMXGNHWUYOP3TSOEC7HEI",
+							"protocol": "http",
+							"host": [
+								"80",
+								"89",
+								"238",
+								"253"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"signup"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "FFPOZGMXGNHWUYOP3TSOEC7HEI"
+								}
+							]
+						},
+						"description": "class RegistrationForm(FlaskForm):\n    email = StringField(\"email\",\n                        validators=[\n                            Length(max=256, message=\"email can't be longer then 256\"),\n                            Email(message=\"email is incorrect\")\n                        ])\n    password = PasswordField(\"password\")\n    password_confirmation = PasswordField(\"password_confirmation\",\n                                          validators=[\n                                              DataRequired(message=\"password confirmation can't be empty\"),\n                                              EqualTo('password', message=\"passwords must match\")\n                                          ])\n    role = StringField(str,\n                       validators=[\n                           DataRequired(),\n\n                       ])"
+					},
+					"response": []
+				},
+				{
+					"name": "CONFIRM_ACCOUNT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "1@mail.ru",
+									"type": "text"
+								},
+								{
+									"key": "confirmation_code",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://80.89.238.253:5000/api/confirm?token=FFPOZGMXGNHWUYOP3TSOEC7HEI",
+							"protocol": "http",
+							"host": [
+								"80",
+								"89",
+								"238",
+								"253"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"confirm"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "FFPOZGMXGNHWUYOP3TSOEC7HEI"
+								}
+							]
+						},
+						"description": "class ConfirmForm(FlaskForm):\n    email = StringField(\"email\",\n                        validators=[\n                            Length(max=256, message=\"email can't be longer then 256\"),\n                            Email(message=\"email is incorrect\")\n                        ])\n    confirmation_code = StringField(\"confirmation_code\",\n                                    validators=[DataRequired(message=\"confirmation code can't be empty\")])\n"
+					},
+					"response": []
+				},
+				{
+					"name": "SEND CONFIRMATION EMAIL AGAIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "1@mail.ru",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://80.89.238.253:5000/api/confirm_again",
+						"description": "Send confirmation for email again"
+					},
+					"response": []
+				},
+				{
+					"name": "GET CLIETNS LIST",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://80.89.238.253:5000/api/get_users?limit=20&offset=0",
+							"protocol": "http",
+							"host": [
+								"80",
+								"89",
+								"238",
+								"253"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"get_users"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET TRAINERS LIST",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://80.89.238.253:5000/api/get_trainers?limit=20&offset=0",
+							"protocol": "http",
+							"host": [
+								"80",
+								"89",
+								"238",
+								"253"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"get_trainers"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL USERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://80.89.238.253:5000/api/get_all?limit=20&offset=0&token=FFPOZGMXGNHWUYOP3TSOEC7HEI",
+							"protocol": "http",
+							"host": [
+								"80",
+								"89",
+								"238",
+								"253"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"get_all"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "token",
+									"value": "FFPOZGMXGNHWUYOP3TSOEC7HEI"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE USER BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://80.89.238.253:5000/api/delete_user_by_id?token=FFPOZGMXGNHWUYOP3TSOEC7HEI&user_id=0",
+							"protocol": "http",
+							"host": [
+								"80",
+								"89",
+								"238",
+								"253"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"delete_user_by_id"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "FFPOZGMXGNHWUYOP3TSOEC7HEI"
+								},
+								{
+									"key": "user_id",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE USER BY EMAIL",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://80.89.238.253:5000/api/delete_user_by_id?token=FFPOZGMXGNHWUYOP3TSOEC7HEI&email=111@mail.ru",
+							"protocol": "http",
+							"host": [
+								"80",
+								"89",
+								"238",
+								"253"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"delete_user_by_id"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "FFPOZGMXGNHWUYOP3TSOEC7HEI"
+								},
+								{
+									"key": "email",
+									"value": "111@mail.ru"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TrainingTypes",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "школа магии",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "поколдуем",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://80.89.238.253:5000/api/training_type_create?token=FFPOZGMXGNHWUYOP3TSOEC7HEI",
+							"protocol": "http",
+							"host": [
+								"80",
+								"89",
+								"238",
+								"253"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"training_type_create"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "FFPOZGMXGNHWUYOP3TSOEC7HEI"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "EDIT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://80.89.238.253:5000/api/training_type_edit?token=FFPOZGMXGNHWUYOP3TSOEC7HEI",
+							"protocol": "http",
+							"host": [
+								"80",
+								"89",
+								"238",
+								"253"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"training_type_edit"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "FFPOZGMXGNHWUYOP3TSOEC7HEI"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				}
+			],
+			"description": "Типы тренировок",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

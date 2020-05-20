@@ -1,6 +1,9 @@
 <template>
   <section class="singin-bg block-grid">
-    <router-link :to="{ name: 'Home' }" class="singin__linkback text__heading_size_l">
+    <router-link
+      :to="{ name: 'Home' }"
+      class="singin__linkback text__heading_size_l"
+    >
       <img src="../assets/img/Arrow.svg" alt="backlink" />
       Назад
     </router-link>
@@ -9,9 +12,9 @@
       <div class="form-blocks">
         <h1 class="singin__heading text__heading_size_h1">Вход в систему</h1>
         <div class="form-block">
-          <div
-            class="singin__err text__heading_size_h3"
-          >{{ errArray['email'] ? errArray['email'].toString() : '' }}</div>
+          <div class="singin__err text__heading_size_h3">
+            {{ errArray['email'] ? errArray['email'].toString() : '' }}
+          </div>
           <input
             type="email"
             name="email"
@@ -21,32 +24,46 @@
           />
         </div>
         <div class="form-block">
-          <div
-            class="singin__err text__heading_size_h3"
-          >{{ errArray['email'] ? errArray['email'].toString() : '' }}</div>
-          <input
-            type="password"
-            name="password"
-            placeholder="Пароль"
-            class="singin__input text__heading_size_h2"
-            v-model="password"
-          />
+          <div class="singin__err text__heading_size_h3">
+            {{ errArray['email'] ? errArray['email'].toString() : '' }}
+          </div>
+          <div class="singin__input-pass-block">
+            <input
+              :type="showPassword ? 'text' : 'password'"
+              name="password"
+              placeholder="Пароль"
+              class="singin__input singin__input-pass text__heading_size_h2"
+              v-model="password"
+            />
+            <button
+              class="singin__input-passbtn"
+              @click="showPassword = !showPassword"
+            >
+              <i class="material-icons singin__icon">
+                {{ showPassword ? 'visibility' : 'visibility_off' }}
+              </i>
+            </button>
+          </div>
         </div>
         <div class="singin__block-btn">
           <div class="singin__block-link">
             <a
               href="#"
               class="singin__link singin__link_color-white text__heading_size_m"
-            >Регистрация/</a>
+              >Регистрация/</a
+            >
             <a
               href="#"
               class="singin__link singin__link_color-orange text__heading_size_m"
-            >Забыли пароль?</a>
+              >Забыли пароль?</a
+            >
           </div>
           <button
             type="submit"
             class="btn__title btn__title_color_orangeb text__heading_size_h3"
-          >ВОЙТИ</button>
+          >
+            ВОЙТИ
+          </button>
         </div>
       </div>
     </form>
@@ -60,7 +77,8 @@ export default {
     return {
       email: '',
       password: '',
-      errArray: {}
+      errArray: {},
+      showPassword: false
     }
   },
 
