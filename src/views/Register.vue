@@ -102,8 +102,10 @@
         <div class="check__text">
           <span class="check__text-body text__heading_size_m"
             >Нажимая кнопку “Зарегистрироваться”, я принимаю
-            <a href="#" class="check__text-body-link"
-              >пользовательское соглашение</a
+            <router-link
+              :to="{ name: 'termsofservice' }"
+              class="check__text-body-link"
+              >пользовательское соглашение</router-link
             >
             и соглашаюсь с правилами использования и обработки персональных
             данных</span
